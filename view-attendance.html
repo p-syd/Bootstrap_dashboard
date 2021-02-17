@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Mark Attendance</title>
+    <title>View Attendance</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
     <!-- Daterange picker -->
@@ -193,7 +193,7 @@
 						</a>
                         <ul aria-expanded="false">
                             <li><a href="./mark-attendance.html">Mark</a></li>
-                            <li><a href="./view-attendance.html">View</a></li>
+                            <li><a href="./app-profile.html">View</a></li>
                         </ul>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -272,7 +272,7 @@
                 <!-- row -->
                 <div class="row">
                     
-					<div class="col-md-5 mb-3 card" style="padding-top: 20px; padding-bottom: 20px;">
+					<div class="col-md-5  card" style="padding-top: 20px; padding-bottom: 20px;">
 						<label for="country"><h4 class="card-title">Class</h4></label>
 						<select class="d-block w-100" id="country" required="">
 							<option value="">Choose...</option>
@@ -282,7 +282,7 @@
 							<option>BE</option>
 						</select>
 						<div class="invalid-feedback">
-							Please select a valid country.
+							Please select a valid option.
 						</div>
 						<br>
 						<label for="country"><h4 class="card-title">Division</h4></label>
@@ -294,11 +294,9 @@
 							<option>D</option>
 						</select>
 						<div class="invalid-feedback">
-							Please select a valid country.
+							Please select a valid option.
 						</div>
 					</div>
-
-
 
                     <div class="col-xl-6">
                         <!-- Card -->
@@ -313,209 +311,101 @@
                         </div>
                         <!-- Card -->
                     </div>
-                    <div class="col-xl-6">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4 class="card-title">Select Time Slot</h4>
-                            </div>
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label>Start Time</label>
-                                        <div class="input-group clockpicker">
-                                            <input type="text" class="form-control" value="09:30"> <span class="input-group-append"><span class="input-group-text"><i
-                                                        class="fa fa-clock-o"></i></span></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6  text-right">
-                                        <label>End Time</label>
-                                        <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                            <input type="text" class="form-control" value="13:14"> <span class="input-group-append"><span class="input-group-text"><i
-                                                        class="fa fa-clock-o"></i></span></span>
-                                        </div>
-                                    </div>                                
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-					
                     
                     
                 </div>
 
 
 
-				<div class="col-lg-12">
-					<div class="card">
-						<div class="card-header">
-							<h4 class="card-title">Check mark the present students</h4>
-						</div>
-						<div class="card-body">
-							<div class="table-responsive">
-								<table class="table table-responsive-md">
-									<thead>
-										<tr>
-											<th style="width:50px;">
-												<div class="custom-control custom-checkbox checkbox-success check-lg mr-3">
-													<input type="checkbox" class="custom-control-input" id="checkAll" required="">
-													<label class="custom-control-label" for="checkAll"></label>
-												</div>
-											</th>
-											<th><strong>ROLL NO.</strong></th>
-											<th><strong>NAME</strong></th>											
-										
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>
-												<div class="custom-control custom-checkbox checkbox-success check-lg mr-3">
-													<input type="checkbox" class="custom-control-input" id="customCheckBox2" required="">
-													<label class="custom-control-label" for="customCheckBox2"></label>
-												</div>
-											</td>
-											<td><strong>542</strong></td>
-											<td><div class="d-flex align-items-center"><img src="images/avatar/1.jpg" class="rounded-lg mr-2" width="24" alt=""/> <span class="w-space-no">Dr. Jackson</span></div></td>
-											
-											
-										</tr>
-										<tr>
-											<td>
-												<div class="custom-control custom-checkbox checkbox-success check-lg mr-3">
-													<input type="checkbox" class="custom-control-input" id="customCheckBox3" required="">
-													<label class="custom-control-label" for="customCheckBox3"></label>
-												</div>
-											</td>
-											<td><strong>542</strong></td>
-											<td><div class="d-flex align-items-center"><img src="images/avatar/2.jpg" class="rounded-lg mr-2" width="24" alt=""/> <span class="w-space-no">Dr. Jackson</span></div></td>
-											
-											
-										</tr>
-										<tr>
-											<td>
-												<div class="custom-control custom-checkbox checkbox-success check-lg mr-3">
-													<input type="checkbox" class="custom-control-input" id="customCheckBox4" required="">
-													<label class="custom-control-label" for="customCheckBox4"></label>
-												</div>
-											</td>
-											<td><strong>542</strong></td>
-											<td><div class="d-flex align-items-center"><img src="images/avatar/3.jpg" class="rounded-lg mr-2" width="24" alt=""/> <span class="w-space-no">Dr. Jackson</span></div></td>
-											
-											
-										</tr>
-										<tr>
-											<td>
-												<div class="custom-control custom-checkbox checkbox-success check-lg mr-3">
-													<input type="checkbox" class="custom-control-input" id="customCheckBox2" required="">
-													<label class="custom-control-label" for="customCheckBox2"></label>
-												</div>
-											</td>
-											<td><strong>542</strong></td>
-											<td><div class="d-flex align-items-center"><img src="images/avatar/1.jpg" class="rounded-lg mr-2" width="24" alt=""/> <span class="w-space-no">Dr. Jackson</span></div></td>
-											
-											
-										</tr>
-										<tr>
-											<td>
-												<div class="custom-control custom-checkbox checkbox-success check-lg mr-3">
-													<input type="checkbox" class="custom-control-input" id="customCheckBox2" required="">
-													<label class="custom-control-label" for="customCheckBox2"></label>
-												</div>
-											</td>
-											<td><strong>542</strong></td>
-											<td><div class="d-flex align-items-center"><img src="images/avatar/1.jpg" class="rounded-lg mr-2" width="24" alt=""/> <span class="w-space-no">Dr. Jackson</span></div></td>
-											
-											
-										</tr>
-										<tr>
-											<td>
-												<div class="custom-control custom-checkbox checkbox-success check-lg mr-3">
-													<input type="checkbox" class="custom-control-input" id="customCheckBox2" required="">
-													<label class="custom-control-label" for="customCheckBox2"></label>
-												</div>
-											</td>
-											<td><strong>542</strong></td>
-											<td><div class="d-flex align-items-center"><img src="images/avatar/1.jpg" class="rounded-lg mr-2" width="24" alt=""/> <span class="w-space-no">Dr. Jackson</span></div></td>
-											
-											
-										</tr>
-										<tr>
-											<td>
-												<div class="custom-control custom-checkbox checkbox-success check-lg mr-3">
-													<input type="checkbox" class="custom-control-input" id="customCheckBox2" required="">
-													<label class="custom-control-label" for="customCheckBox2"></label>
-												</div>
-											</td>
-											<td><strong>542</strong></td>
-											<td><div class="d-flex align-items-center"><img src="images/avatar/1.jpg" class="rounded-lg mr-2" width="24" alt=""/> <span class="w-space-no">Dr. Jackson</span></div></td>
-											
-											
-										</tr>
-										<tr>
-											<td>
-												<div class="custom-control custom-checkbox checkbox-success check-lg mr-3">
-													<input type="checkbox" class="custom-control-input" id="customCheckBox2" required="">
-													<label class="custom-control-label" for="customCheckBox2"></label>
-												</div>
-											</td>
-											<td><strong>542</strong></td>
-											<td><div class="d-flex align-items-center"><img src="images/avatar/1.jpg" class="rounded-lg mr-2" width="24" alt=""/> <span class="w-space-no">Dr. Jackson</span></div></td>
-											
-											
-										</tr>
-										<tr>
-											<td>
-												<div class="custom-control custom-checkbox checkbox-success check-lg mr-3">
-													<input type="checkbox" class="custom-control-input" id="customCheckBox2" required="">
-													<label class="custom-control-label" for="customCheckBox2"></label>
-												</div>
-											</td>
-											<td><strong>542</strong></td>
-											<td><div class="d-flex align-items-center"><img src="images/avatar/1.jpg" class="rounded-lg mr-2" width="24" alt=""/> <span class="w-space-no">Dr. Jackson</span></div></td>
-											
-											
-										</tr>
-										<tr>
-											<td>
-												<div class="custom-control custom-checkbox checkbox-success check-lg mr-3">
-													<input type="checkbox" class="custom-control-input" id="customCheckBox2" required="">
-													<label class="custom-control-label" for="customCheckBox2"></label>
-												</div>
-											</td>
-											<td><strong>542</strong></td>
-											<td><div class="d-flex align-items-center"><img src="images/avatar/1.jpg" class="rounded-lg mr-2" width="24" alt=""/> <span class="w-space-no">Dr. Jackson</span></div></td>
-											
-											
-										</tr>
-										<tr>
-											<td>
-												<div class="custom-control custom-checkbox checkbox-success check-lg mr-3">
-													<input type="checkbox" class="custom-control-input" id="customCheckBox2" required="">
-													<label class="custom-control-label" for="customCheckBox2"></label>
-												</div>
-											</td>
-											<td><strong>542</strong></td>
-											<td><div class="d-flex align-items-center"><img src="images/avatar/1.jpg" class="rounded-lg mr-2" width="24" alt=""/> <span class="w-space-no">Dr. Jackson</span></div></td>
-											
-											
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-				</div>
+				
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Attendance Record</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-responsive-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Name</th>
+                                            <th>Status</th>
+                                           
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th>1</th>
+                                            <td>Meenal</td>
+                                            <td><span class="badge badge-primary">Full Time Internship</span>
+                                            </td>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <th>2</th>
+                                            <td> Agarwal</td>
+                                            <td><span class="badge badge-success">Present</span>
+                                            </td>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <th>3</th>
+                                            <td>Atharva </td>
+                                            <td><span class="badge badge-danger">Absent</span>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th>4</th>
+                                            <td> Rahatkar</td>
+                                            <td><span class="badge badge-success">Present</span>
+                                            </td>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <th>5</th>
+                                            <td>Arpita Agarwal</td>
+                                            <td><span class="badge badge-success">Present</span>
+                                            </td>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <th>6</th>
+                                            <td>Atharva </td>
+                                            <td><span class="badge badge-success">Present</span>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th>7</th>
+                                            <td>Meenal Rahatkar</td>
+                                            <td><span class="badge badge-primary">Full Time Internship</span>
+                                            </td>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <th>8</th>
+                                            <td>Arpita Agarwal</td>
+                                            <td><span class="badge badge-success">Present</span>
+                                            </td>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <th>9</th>
+                                            <td>Atharva </td>
+                                            <td><span class="badge badge-danger">Absent</span>
+                                            </td>
+                                            
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+             
 
-
-				<div class="col-xl-6 text-center">
-					<div class="card">
-						
-						<div class="card-body">
-							<button type="button" class="btn btn-primary btn-lg">Mark</button>
-						</div>
-					</div>
-				</div>
+				
 
 
             </div>
