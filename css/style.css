@@ -4923,6 +4923,7 @@ a.close.disabled {
 
 .carousel-caption {
   position: absolute;
+  background: rgba(0, 0, 0, 0.50);
   right: 15%;
   bottom: 20px;
   left: 15%;
@@ -26752,12 +26753,12 @@ table.dataTable thead .sorting {
     opacity: 1; }
 
 .widget-carousel {
-  position: relative; }
+  position: center; }
   .widget-carousel .owl-item img {
     max-width: 85px; }
   .widget-carousel .owl-next,
   .widget-carousel .owl-prev {
-    position: absolute;
+    position: center;
     width: 60px;
     height: 60px;
     line-height: 60px;
