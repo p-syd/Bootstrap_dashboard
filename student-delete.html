@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Student Details</title>
+    <title>Delete Student</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
     <link href="./vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
@@ -100,7 +100,7 @@
             Header end ti-comment-alt
         ***********************************-->
 
-        <!--**********************************
+       <!--**********************************
             Sidebar start
         ***********************************-->
         <div class="deznav">
@@ -134,10 +134,10 @@
 							<span class="nav-text">Student</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="./ui-accordion.html">Add</a></li>
-                            <li><a href="./ui-alert.html">Update</a></li>
-                            <li><a href="./ui-badge.html">View</a></li>
-                            <li><a href="./ui-button.html">Delete</a></li>
+                            <li><a href="./student-add.html">Add</a></li>
+                            <li><a href="./student-delete.html">Delete</a></li>
+                            <li><a href="./student-view.html">View</a></li>
+                           
                         </ul>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -162,7 +162,7 @@
 							<span class="nav-text">Library Manager</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="./page-register.html">Get Books</a></li>
+                            <li><a href="./get-books.html">Get Books</a></li>
                             <li><a href="./page-login.html">View Books</a></li>
                             <li><a href="./page-lock-screen.html">Return Books</a></li>
                         </ul>
@@ -178,80 +178,59 @@
         <!--**********************************
             Sidebar end
         ***********************************-->
-		
+
+
 		<!--**********************************
             Content body start
         ***********************************-->
         <div class="content-body">
-            <div class="content-body">
-                <div class="container-fluid">
-                <div class="col-xl-12">
-                <div class="card">
-                    <div class="card-header">
-                        <h4 class="card-title">Custom Tab 1</h4>
+            <div class="container-fluid">
+                <div class="row page-titles mx-0">
+                    <div class="col-sm-6 p-md-0">
+                        <div class="welcome-text">
+                            <h4>Enter Details to remove Student </h4>
+                            
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <!-- Nav tabs -->
-                        <div class="custom-tab-1">
-                            <ul class="nav nav-tabs">
-                                <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#add"><i class="la la-home mr-2"></i> Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#profile1"><i class="la la-user mr-2"></i> Profile</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#contact1"><i class="la la-phone mr-2"></i>  Contact</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#message1"><i class="la la-envelope mr-2"></i> Message</a>
-                                </li>
-                            </ul>
-                            <div class="tab-content">
-                                <div class="tab-pane fade show active" id="home1" role="tabpanel">
-                                    <div class="pt-4">
-                                        <h4>This is home title</h4>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.
-                                        </p>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="profile1">
-                                    <div class="pt-4">
-                                        <h4>This is profile title</h4>
-                                        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor.
-                                        </p>
-                                        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="contact1">
-                                    <div class="pt-4">
-                                        <h4>This is contact title</h4>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.
-                                        </p>
-                                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="message1">
-                                    <div class="pt-4">
-                                        <h4>This is message title</h4>
-                                        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor.
-                                        </p>
-                                        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor.
-                                        </p>
-                                    </div>
+                    <!-- good thing to add-->
+                    <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Student</a></li>
+                            <li class="breadcrumb-item active"><a href="javascript:void(0)">Delete</a></li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- row -->
+                <div class="row">
+					<div class="col-xl-12 col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                
+                            </div>
+                            <div class="card-body">
+                                <div class="basic-form">
+                                    <form>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 col-form-label">PRN NO.</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" placeholder="71854442F">
+                                            </div>
+                                        </div>
+                                        
+                                       
+                                        <div class="form-group row">
+                                            <div class="col-sm-10">
+                                                <button type="submit" class="btn btn-primary">Delete</button>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+					</div>
+				</div>
             </div>
-		</div>
-    </div>
-</div>
+        </div>
         <!--**********************************
             Content body end
         ***********************************-->
