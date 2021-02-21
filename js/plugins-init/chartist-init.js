@@ -472,17 +472,15 @@
 		//Horizontal bar chart
   
 		new Chartist.Bar('#horizontal-bar-chart', {
-				labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-				series: [
-				  [5, 4, 3, 7, 5, 10, 3],
-				  [3, 2, 9, 5, 4, 6, 4]
-				]
+				labels: ['MP', 'DSA', 'ADS', 'AIR', 'HCI', 'SCOA', 'DMW'],
+				series: [[ 10,15,12,17,25,16,27]]
 			  }, {
-				seriesBarDistance: 10,
-				reverseData: true,
+				seriesBarDistance: 12,
+				reverseData: false,
 				horizontalBars: true,
 				axisY: {
-				  offset: 70
+				  offset: 70,
+				  title: "Subjects"
 				},
 				plugins: [
 				  Chartist.plugins.tooltip()
@@ -526,7 +524,7 @@
 				labelInterpolationFnc: Chartist.noop
 			  },
 			  axisY: {
-				offset: 60
+				offset: 60,
 			  }
 			}],
 			// Options override for media > 800px

@@ -55,16 +55,16 @@
         var t = new Date,
             n = (t.getDate(), t.getMonth(), t.getFullYear(), new Date(e.now())),
             a = [{
-                title: "Chicken Burger",
+                title: "Meeting with department head",
                 start: new Date(e.now() + 158e6),
                 className: "bg-dark"
             }, {
-                title: "Soft drinks",
+                title: "Take submission of defaulters",
                 start: n,
                 end: n,
                 className: "bg-danger"
             }, {
-                title: "Hot dog",
+                title: "Get data for competition",
                 start: new Date(e.now() + 338e6),
                 className: "bg-primary"
             }],
