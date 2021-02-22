@@ -346,7 +346,7 @@
                         <br>
                         <label for="country">
                             <h4 class="card-title">Search</h4>
-                            <input type="search" class="search_bar form-control" placeholder="Enter Name or Rollno to search record">
+                            <input type="search" class="search_bar form-control" id="myInput" placeholder="Enter Name or Rollno to search record">
                         </label>
                     </div>
                     <div class="col-xl-6">
@@ -360,7 +360,7 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-responsive-md">
+                            <table class="table table-responsive-md" id="markstab">
                                 <thead>
                                     <tr>
                                         <th style="width:80px;"><strong>Roll No.</strong></th>
@@ -551,23 +551,8 @@
     <script src="./js/plugins-init/pickadate-init.js"></script>
 
     <script>
-        (function($) {
-         
-            var table = $('#example5').DataTable({
-                searching: false,
-                paging:true,
-                select: false,
-                //info: false,         
-                lengthChange:false 
-                
-            });
-            $('#example tbody').on('click', 'tr', function () {
-                var data = table.row( this ).data();
-                
-            });
-           
-        })(jQuery);
-        </script>
+        
+    </script>
 
 </body>
 
