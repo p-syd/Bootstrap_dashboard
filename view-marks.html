@@ -558,7 +558,7 @@
             
             span_items.forEach(function(item){
                 if(item.textContent.toLocaleLowerCase().indexOf(search_record) != -1){
-                    item.closest(".tab-item").style.display = "block";
+                    item.closest(".tab-item").style.display = "table-row";
                 } else {
                     item.closest(".tab-item").style.display = "none";
                 }
