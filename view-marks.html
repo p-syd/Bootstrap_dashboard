@@ -186,8 +186,8 @@
                     </div>
                     <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">Student</a></li>
-                            <li class="breadcrumb-item active"><a href="javascript:void(0)">View Marks</a></li>
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Marksheet</a></li>
+                            <li class="breadcrumb-item active"><a href="javascript:void(0)">View Marksheet</a></li>
                         </ol>
                     </div>
                 </div>
@@ -197,8 +197,8 @@
                         <label for="country">
                             <h4 class="card-title">Class</h4>
                         </label>
-                        <select class="d-block w-100" id="country" required="">
-                            <option value="">Choose...</option>
+                        <select class="d-block w-100" id="classSel" required="">
+                            <option value="nan">Choose..</option>
                             <option>FE</option>
                             <option>SE</option>
                             <option>TE</option>
@@ -211,11 +211,11 @@
                         <label for="country">
                             <h4 class="card-title">Status</h4>
                         </label>
-                        <select class="d-block w-100" id="country" required="">
-                            <option value="">Choose...</option>
-                            <option>Passed</option>
-                            <option>Failed</option>
-                            <option>Absent</option>
+                        <select class="d-block w-100" id="Status" required="">
+                            <option value="nan">Choose..</option>
+                            <option value="Passed">Passed</option>
+                            <option value="Failed">Failed</option>
+                            <option value="Absent">Absent</option>
                         </select>
                         <div class="invalid-feedback">
                             Please select a valid option.
@@ -223,7 +223,7 @@
                         <br>
                         <label for="country">
                             <h4 class="card-title">Search</h4>
-                            <input type="search" class="search_bar form-control" placeholder="Enter Name or Rollno to search record">
+                            <input type="search" class="search_bar form-control" id="myInput" placeholder="Enter Name or Rollno to search record">
                         </label>
                     </div>
                     <div class="col-xl-6">
@@ -237,7 +237,7 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-responsive-md">
+                            <table class="table table-responsive-md" id="markstab">
                                 <thead>
                                     <tr>
                                         <th style="width:80px;"><strong>Roll No.</strong></th>
@@ -251,7 +251,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                    <tr class="tab-item" stuClass="FE" status="Passed">
                                         <td><strong>01</strong></td>
                                         <td>John</td>
                                         <td>Doe</td>
@@ -260,7 +260,7 @@
                                         <td>25</td>
                                         <td><span class="badge light badge-success">Passed</span></td>
                                     </tr>
-                                    <tr>
+                                    <tr class="tab-item" stuClass="FE" status="Failed">
                                         <td><strong>02</strong></td>
                                         <td>Sam</td>
                                         <td>Doe</td>
@@ -269,7 +269,7 @@
                                         <td>12</td>
                                         <td><span class="badge light badge-danger">Failed</span></td>
                                     </tr>
-                                    <tr>
+                                    <tr class="tab-item" stuClass="FE" status="Absent">
                                         <td><strong>03</strong></td>
                                         <td>Mike</td>
                                         <td>Doe</td>
@@ -278,7 +278,7 @@
                                         <td>--</td>
                                         <td><span class="badge light badge-warning">Absent</span></td>
                                     </tr>
-                                    <tr>
+                                    <tr class="tab-item" stuClass="SE" status="Passed">
                                         <td><strong>04</strong></td>
                                         <td>Stan</td>
                                         <td>Lee</td>
@@ -287,7 +287,7 @@
                                         <td>30</td>
                                         <td><span class="badge light badge-success">Passed</span></td>
                                     </tr>
-                                    <tr>
+                                    <tr class="tab-item" stuClass="SE" status="Passed">
                                         <td><strong>05</strong></td>
                                         <td>Jack</td>
                                         <td>Reacher</td>
@@ -296,16 +296,16 @@
                                         <td>32</td>
                                         <td><span class="badge light badge-success">Passed</span></td>
                                     </tr>
-                                    <tr>
+                                    <tr class="tab-item" stuClass="SE" status="Failed">
                                         <td><strong>06</strong></td>
                                         <td>George</td>
                                         <td>Dane</td>
                                         <td>SE</td>
                                         <td>B</td>
                                         <td>9</td>
-                                        <td><span class="badge light badge-warning">Failed</span></td>
+                                        <td><span class="badge light badge-danger">Failed</span></td>
                                     </tr>
-                                    <tr>
+                                    <tr class="tab-item" stuClass="SE" status="Passed">
                                         <td><strong>07</strong></td>
                                         <td>Kevin</td>
                                         <td>Smith</td>
@@ -314,7 +314,7 @@
                                         <td>22</td>
                                         <td><span class="badge light badge-success">Passed</span></td>
                                     </tr>
-                                    <tr>
+                                    <tr class="tab-item" stuClass="SE" status="Passed">
                                         <td><strong>08</strong></td>
                                         <td>Aaron</td>
                                         <td>Paul</td>
@@ -323,7 +323,7 @@
                                         <td>39</td>
                                         <td><span class="badge light badge-success">Passed</span></td>
                                     </tr>
-                                    <tr>
+                                    <tr class="tab-item" stuClass="SE" status="Passed">
                                         <td><strong>09</strong></td>
                                         <td>Jake</td>
                                         <td>Paul</td>
@@ -332,7 +332,7 @@
                                         <td>26</td>
                                         <td><span class="badge light badge-success">Passed</span></td>
                                     </tr>
-                                    <tr>
+                                    <tr class="tab-item" stuClass="SE" status="Passed">
                                         <td><strong>10</strong></td>
                                         <td>Raj</td>
                                         <td>Sharma</td>
@@ -341,11 +341,47 @@
                                         <td>21</td>
                                         <td><span class="badge light badge-success">Passed</span></td>
                                     </tr>
-                                    <tr>
+                                    <tr class="tab-item" stuClass="SE" status="Passed">
                                         <td><strong>11</strong></td>
                                         <td>Rohit</td>
                                         <td>Kumar</td>
                                         <td>SE</td>
+                                        <td>B</td>
+                                        <td>29</td>
+                                        <td><span class="badge light badge-success">Passed</span></td>
+                                    </tr>
+                                    <tr class="tab-item" stuClass="TE" status="Passed">
+                                        <td><strong>12</strong></td>
+                                        <td>Harsh</td>
+                                        <td>Kumar</td>
+                                        <td>TE</td>
+                                        <td>B</td>
+                                        <td>29</td>
+                                        <td><span class="badge light badge-success">Passed</span></td>
+                                    </tr>
+                                    <tr class="tab-item" stuClass="TE" status="Passed">
+                                        <td><strong>13</strong></td>
+                                        <td>Prem</td>
+                                        <td>Kumar</td>
+                                        <td>TE</td>
+                                        <td>B</td>
+                                        <td>29</td>
+                                        <td><span class="badge light badge-success">Passed</span></td>
+                                    </tr>
+                                    <tr class="tab-item" stuClass="TE" status="Passed">
+                                        <td><strong>14</strong></td>
+                                        <td>Arjun</td>
+                                        <td>Pandey</td>
+                                        <td>TE</td>
+                                        <td>B</td>
+                                        <td>29</td>
+                                        <td><span class="badge light badge-success">Passed</span></td>
+                                    </tr>
+                                    <tr class="tab-item" stuClass="BE" status="Passed">
+                                        <td><strong>15</strong></td>
+                                        <td>Raman</td>
+                                        <td>Pandey</td>
+                                        <td>BE</td>
                                         <td>B</td>
                                         <td>29</td>
                                         <td><span class="badge light badge-success">Passed</span></td>
@@ -355,11 +391,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-
             </div>
         </div>
         <!--**********************************
