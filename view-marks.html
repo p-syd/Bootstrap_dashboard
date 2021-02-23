@@ -458,6 +458,52 @@
     <!-- Pickdate -->
     <script src="./js/plugins-init/pickadate-init.js"></script>
 
+    <script>
+        var search_inp = document.querySelector("#myInput");
+        search_inp.addEventListener("keyup", function(e){
+            var search_record = e.target.value.toLowerCase();
+            var span_items = document.querySelectorAll(".tab-item")
+            
+            span_items.forEach(function(item){
+                if(item.textContent.toLocaleLowerCase().indexOf(search_record) != -1){
+                    item.closest(".tab-item").style.display = "table-row";
+                } else {
+                    item.closest(".tab-item").style.display = "none";
+                }
+            })
+        })
+    </script>
+
+    <script>
+        $(document).ready(function(){
+
+            var rows = $(markstab).children('tbody').children('tr');
+
+            $("#classSel").on("change", function(){
+                //var selected = this.value;
+                var selected = $('#classSel').find("option:selected").val();
+
+                if(selected != "nan") {
+                    rows.filter("[stuClass="+selected+"]").show();
+                    rows.not("[stuClass="+selected+"]").hide();
+                } else {
+                    rows.show();
+                }
+            });
+
+            $("#Status").on("change", function(){
+                //var selected = this.value;
+                var selected = $('#Status').find("option:selected").val();
+
+                if(selected != "nan") {
+                    rows.filter("[status="+selected+"]").show();
+                    rows.not("[status="+selected+"]").hide();
+                } else {
+                    rows.show();
+                }
+            });
+        });
+    </script>
 
 
 </body>
