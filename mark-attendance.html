@@ -196,7 +196,7 @@
                     
 					<div class="col-xl-6  card" style="padding-top: 20px; padding-bottom: 20px;">
 						<label for="country"><h4 class="card-title">Class</h4></label>
-						<select class="d-block w-100" id="country" required="">
+						<select class="d-block w-100" required="" id="stu-class">
 							<option value="">Choose...</option>
 							<option>FE</option>
 							<option>SE</option>
@@ -208,7 +208,7 @@
 						</div>
 						<br>
 						<label for="country"><h4 class="card-title">Division</h4></label>
-						<select class="d-block w-100" id="country" required="">
+						<select class="d-block w-100" required="" id="stu-div">
 							<option value="">Choose...</option>
 							<option>A</option>
 							<option>B</option>
@@ -246,14 +246,14 @@
                                     <div class="col-md-6 mb-3">
                                         <label>Start Time</label>
                                         <div class="input-group clockpicker">
-                                            <input type="text" class="form-control" value="09:30"> <span class="input-group-append"><span class="input-group-text"><i
+                                            <input type="text" class="form-control" value="09:30" id="stime"> <span class="input-group-append"><span class="input-group-text"><i
                                                         class="fa fa-clock-o"></i></span></span>
                                         </div>
                                     </div>
                                     <div class="col-md-6  text-right">
                                         <label>End Time</label>
                                         <div class="input-group clockpicker" data-placement="bottom" data-align="top" data-autoclose="true">
-                                            <input type="text" class="form-control" value="13:14"> <span class="input-group-append"><span class="input-group-text"><i
+                                            <input type="text" class="form-control" value="13:14" id="etime"> <span class="input-group-append"><span class="input-group-text"><i
                                                         class="fa fa-clock-o"></i></span></span>
                                         </div>
                                     </div>                                
@@ -543,7 +543,7 @@
 					<div class="card">
 						
 						<div class="card-body">
-							<button type="button" class="btn btn-primary btn-lg">Mark</button>
+							<button type="button" class="btn btn-primary btn-lg" id="markatt">Mark</button>
 						</div>
 					</div>
 				</div>
@@ -615,8 +615,35 @@
     <script src="./js/plugins-init/material-date-picker-init.js"></script>
     <!-- Pickdate -->
     <script src="./js/plugins-init/pickadate-init.js"></script>
+	<!-- alerts pack src -->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
+	<script>
+		$("#markatt").click(function() {
+			var sClass = $("#stu-class").val();
+			var sDiv = $("#stu-div").val();
+			var sDate = $("#datepicker").val();
+			var startTime = $("#stime").val();
+			var endTime = $("#etime").val();
 
+			if(sClass === '' || sDiv === '' || sDate === '' || startTime === '' || endTime === '') {
+				Swal.fire({
+					icon: 'error',
+					title: 'Oops...',
+					text: 'Please check the input fields again!',
+				  })
+			} else {
+				Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Your attendance has been marked!',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
+			}
+		})
+	</script>
 
 </body>
 
