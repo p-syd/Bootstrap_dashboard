@@ -5,13 +5,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Delete Student</title>
+    <title>Vortex </title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
     <link href="./vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="./vendor/chartist/css/chartist.min.css">
     <link href="./vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+	<link href="./vendor/fullcalendar/css/fullcalendar.min.css" rel="stylesheet">
+    	<link href="./vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
+	<link href="./css/icomoon.css" rel="stylesheet">
 	<link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
 
 </head>
@@ -41,9 +44,9 @@
         ***********************************-->
         <div class="nav-header">
             <a href="index.html" class="brand-logo">
-                <img class="logo-abbr" src="./images/1036303.png" alt="">
-                <img class="logo-compact" src="./images/download.png" alt="">
-                <img class="brand-title" src="./images/download.png" alt="">
+                <img class="logo-abbr" src="./images/LOGO1.png" alt="">
+                <img class="logo-compact" src="./images/LOGO2.png" alt="">
+                <img class="brand-title" src="./images/LOGO2.png" alt="">
             </a>
 
             <div class="nav-control">
@@ -56,14 +59,8 @@
             Nav header end
         ***********************************-->
 		
-		<!--**********************************
-            Chat box start
-        ***********************************-->
 		
 		<!--**********************************
-            Chat box End
-        ***********************************-->
-	<!--**********************************
             Header start
         ***********************************-->
         <div class="header">
@@ -96,7 +93,7 @@
             Header end ti-comment-alt
         ***********************************-->
 
- <!--**********************************
+       <!--**********************************
             Sidebar start
         ***********************************-->
         <div class="deznav">
@@ -165,58 +162,109 @@
         <!--**********************************
             Sidebar end
         ***********************************-->
-
+		
 		<!--**********************************
             Content body start
         ***********************************-->
         <div class="content-body">
-            <div class="container-fluid">
-                <div class="row page-titles mx-0">
-                    <div class="col-sm-6 p-md-0">
-                        <div class="welcome-text">
-                            <h4>Enter Details to remove Student </h4>
+            <!-- row -->
+			<div class="container-fluid">
+                
+                <h2>FAQ section</h2><br>
+                <h5>If you're unable to find the answer here, feel free to reach out to us!</h5>
+                <div class="card">
+                    <div class="card-header d-block">
+                       
+                    </div>
+                    <div class="card-body">
+                        <!-- Default accordion -->
+                        <div id="accordion-one" class="accordion accordion-primary">
+                            <div class="accordion__item">
+                                <div class="accordion__header rounded-lg" data-toggle="collapse" data-target="#default_collapseOne">
+                                    <span class="accordion__header--text">Unable to mark attendace</span>
+                                    <span class="accordion__header--indicator"></span>
+                                </div>
+                                <div id="default_collapseOne" class="collapse accordion__body show" data-parent="#accordion-one">
+                                    <div class="accordion__body--text">
+                                        In order to mark attendace, make sure you check the right checkbox present in front of the student name/rollno.
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="accordion__item">
+                                <div class="accordion__header collapsed rounded-lg" data-toggle="collapse" data-target="#default_collapseTwo">
+                                    <span class="accordion__header--text">Issue with view attendance</span>
+                                    <span class="accordion__header--indicator"></span>
+                                </div>
+                                <div id="default_collapseTwo" class="collapse accordion__body" data-parent="#accordion-one">
+                                    <div class="accordion__body--text">
+                                        At times due toserver lag, we might not fetch the result quickly. Be patient you'll se the results. If not feel free to reach out to us.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion__item">
+                                <div class="accordion__header collapsed rounded-lg" data-toggle="collapse" data-target="#default_collapseThree">
+                                    <span class="accordion__header--text">Class entry not found in mark attendance page</span>
+                                    <span class="accordion__header--indicator"></span>
+                                </div>
+                                <div id="default_collapseThree" class="collapse accordion__body" data-parent="#accordion-one">
+                                    <div class="accordion__body--text">
+                                        if the entry is not found in mark attendace page, make sure you have the uthorizartion to manipulate the respectieve class entries. If not, you can always go ahed and create class entries in add student section.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion__item">
+                                <div class="accordion__header collapsed rounded-lg" data-toggle="collapse" data-target="#default_collapseFour">
+                                    <span class="accordion__header--text">Google Drive not shared with student</span>
+                                    <span class="accordion__header--indicator"></span>
+                                </div>
+                                <div id="default_collapseFour" class="collapse accordion__body" data-parent="#accordion-one">
+                                    <div class="accordion__body--text">
+                                        In order to share google drive with class, you will have to configure the sharable resourses in the profile section.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion__item">
+                                <div class="accordion__header collapsed rounded-lg" data-toggle="collapse" data-target="#default_collapseFive">
+                                    <span class="accordion__header--text">Library return not availble</span>
+                                    <span class="accordion__header--indicator"></span>
+                                </div>
+                                <div id="default_collapseFive" class="collapse accordion__body" data-parent="#accordion-one">
+                                    <div class="accordion__body--text">
+                                        Once the deadline to return books is passed you are expected to come down to the office an file a return.
+                                        You will be asked to pay the fine an most cases for the same. 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion__item">
+                                <div class="accordion__header collapsed rounded-lg" data-toggle="collapse" data-target="#default_collapseSix">
+                                    <span class="accordion__header--text">Time Table not updtes</span>
+                                    <span class="accordion__header--indicator"></span>
+                                </div>
+                                <div id="default_collapseSix" class="collapse accordion__body" data-parent="#accordion-one">
+                                    <div class="accordion__body--text">
+                                        Time tables will be updated by admin, once the same is done you will se the changes!
+                                    </div>
+                                </div>
+                            </div>
+
                             
                         </div>
                     </div>
-                    <!-- good thing to add-->
-                    <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">Student</a></li>
-                            <li class="breadcrumb-item active"><a href="javascript:void(0)">Delete</a></li>
-                        </ol>
                     </div>
-                </div>
-                <!-- row -->
-                <div class="row">
-					<div class="col-xl-12 col-lg-12">
-                        <div class="card">
-                            <div class="card-header">
-                                
-                            </div>
-                            <div class="card-body">
-                                <div class="basic-form">
-                                    <form>
-                                        <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">PRN NO.</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" class="form-control" placeholder="71854442F">
-                                            </div>
-                                        </div>
-                                        
-                                       
-                                        <div class="form-group row">
-                                            <div class="col-sm-10">
-                                                <button type="submit" class="btn btn-primary">Delete</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-					</div>
-				</div>
-            </div>
-        </div>
+
+
+                   
+
+
+
+
+                    
+
+
+
+                
+        	</div>
+		</div>
         <!--**********************************
             Content body end
         ***********************************-->
