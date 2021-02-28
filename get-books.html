@@ -314,7 +314,7 @@
     <script src="./js/plugins-init/pickadate-init.js"></script>
     <!-- For Alerts -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <script>
         $("#submit").click(function() {
@@ -330,9 +330,10 @@
                     button: "Okay",
                 });
             } else {
-                swal({
+                Swal.fire({
                     title: "Yaay!",
                     text: "Book issued to "+stuname+"!",
+                    footer: '<p>Want to return some books? click <b><a href=return-books.html> Here!</a></b></p>',
                     icon: "success",
                     button: "Okay",
                 });
