@@ -251,7 +251,7 @@
                                                 <div class="col-lg-6 col-sm-6 col-6">
                                                     <div class="form-group">
                                                         <label for="mailclient11" class="mailclinet mailclinet-gmail">
-                                                            <input type="radio" name="emailclient" id="mailclient11">
+                                                            <input type="radio" name="emailclient" id="mailclient11" onclick="mailNotify()">
                                                             <span class="mail-icon">
                                                                 <i class="mdi mdi-google-plus" aria-hidden="true"></i>
                                                             </span>
@@ -263,7 +263,7 @@
                                                 <div class="col-lg-6 col-sm-6 col-6">
                                                     <div class="form-group">
                                                         <label for="mailclient13" class="mailclinet mailclinet-drive">
-                                                            <input type="radio" name="emailclient" id="mailclient13">
+                                                            <input type="radio" name="emailclient" id="mailclient13" onclick="materialNotif()">
                                                             <span class="mail-icon">
                                                                 <i class="mdi mdi-google-drive" aria-hidden="true"></i>
                                                             </span>
@@ -337,6 +337,50 @@
 
     <!-- Form step init -->
     <script src="./js/plugins-init/jquery-steps-init.js"></script>
+    <!-- For Alerts -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <script>
+        function mailNotify() {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'bottom',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                  toast.addEventListener('mouseenter', Swal.stopTimer)
+                  toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+              })
+              
+              Toast.fire({
+                icon: 'success',
+                title: 'Student added to Google Group'
+              })
+        }
+    </script>
+    <script>
+        function materialNotif() {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'bottom',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                  toast.addEventListener('mouseenter', Swal.stopTimer)
+                  toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+              })
+              
+              Toast.fire({
+                icon: 'success',
+                title: 'Class resources shared with student'
+              })
+        }
+    </script>
 
 
 
