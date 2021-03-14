@@ -79,7 +79,7 @@ jQuery(".form-valide").validate({
         "val-skill": "Please select a skill!",
         "val-currency": "Please enter a price!",
         "val-website": "Please enter your website!",
-        "val-phoneus": "Please enter a US phone!",
+        "val-phoneus": "Please enter a India phone!",
         "val-digits": "Please enter only digits!",
         "val-number": "Please enter a number!",
         "val-range": "Please enter a number between 1 and 5!",

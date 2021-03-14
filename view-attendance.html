@@ -53,9 +53,9 @@
         ***********************************-->
         <div class="nav-header">
             <a href="index.html" class="brand-logo">
-                <img class="logo-abbr" src="./images/logo.png" alt="">
-                <img class="logo-compact" src="./images/logo-text.png" alt="">
-                <img class="brand-title" src="./images/logo-text.png" alt="">
+                <img class="logo-abbr" src="./images/LOGO1.png" alt="">
+                <img class="logo-compact" src="./images/LOGO2.png" alt="">
+                <img class="brand-title" src="./images/LOGO2.png" alt="">
             </a>
 
             <div class="nav-control">
@@ -195,29 +195,35 @@
                 <!-- row -->
                 <div class="row">
                     
-					<div class="col-md-6  card" style="padding-top: 20px; padding-bottom: 20px;">
-						<label for="country"><h4 class="card-title">Class</h4></label>
-						<select class="d-block w-100" id="country" required="">
-							<option value="">Choose...</option>
-							<option>FE</option>
-							<option>SE</option>
-							<option>TE</option>
-							<option>BE</option>
-						</select>
-						<div class="invalid-feedback">
-							Please select a valid option.
+					<div class="col-xl-6  card">
+						<label for="country">
+						<div class="card-header">
+							<h4 class="card-title">Year & Division</h4></label>
 						</div>
-						<br>
-						<label for="country"><h4 class="card-title">Division</h4></label>
-						<select class="d-block w-100" id="country" required="">
-							<option value="">Choose...</option>
-							<option>A</option>
-							<option>B</option>
-							<option>C</option>
-							<option>D</option>
-						</select>
-						<div class="invalid-feedback">
-							Please select a valid option.
+						<div class="card-body">
+							<p class="mb-1">Year</p>
+							<select class="d-block w-100" required="" id="stu-class">
+								<option value="">Choose...</option>
+								<option>FE</option>
+								<option>SE</option>
+								<option>TE</option>
+								<option>BE</option>
+							</select>
+							<div class="invalid-feedback">
+								Please select a valid year.
+							</div>
+							<br>
+							<label for="country"><p class="mb-1">Division</p></label>
+							<select class="d-block w-100" required="" id="stu-div">
+								<option value="">Choose...</option>
+								<option>A</option>
+								<option>B</option>
+								<option>C</option>
+								<option>D</option>
+							</select>
+							<div class="invalid-feedback">
+								Please select a valid division.
+							</div>
 						</div>
 					</div>
 
