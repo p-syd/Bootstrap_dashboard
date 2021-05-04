@@ -26,17 +26,21 @@ def register():
         cpassword = request.form.get("cpassword")
         securepass = sha256_crypt.encrypt(str(password))
 
-        if password == cpassword:
-            db.execute("INSERT into REGISTER(username, email, password) VALUES(:name, :email, :password)", {"name":name, "email":email, "password":securepass})
-            db.commit()
-            flash("Account created!", "success")
-            return render_template('page-login.html')
+        if name =='' or email == '' or password == '' or cpassword == '':
+            flash("You left some fields empty!", "danger")
         else:
-            flash("password doesn't match", "danger")
-            return render_template("page-register.html")
+            if password == cpassword:
+                db.execute("INSERT into REGISTER(username, email, password) VALUES(:name, :email, :password)", {"name":name, "email":email, "password":securepass})
+                db.commit()
+                flash("Account created!", "success")
+                return render_template('page-login.html')
+            else:
+                flash("password doesn't match", "danger")
+                return render_template("page-register.html")
     return render_template('page-register.html')
 
 #login
+@app.route('/', methods=["GET", "POST"])
 @app.route('/page-login', methods=["GET", "POST"])
 def login():
     if request.method == 'POST':
