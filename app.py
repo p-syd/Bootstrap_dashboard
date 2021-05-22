@@ -4,6 +4,8 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField
 
+
+
 from passlib.hash import sha256_crypt
 
 engine = create_engine("sqlite:///test.db")
@@ -77,6 +79,55 @@ def recovery():
         else:
             return render_template("index.html")
     return render_template('page-forgot-password.html')
+
+
+@app.route('/mark-attendance', methods=["GET", "POST"])
+def mark_attendance():
+    return render_template("mark-attendance.html")
+
+@app.route('/view-attendance', methods=["GET", "POST"])
+def view_attendance():
+    return render_template("view-attendance.html")
+
+@app.route('/view-timetable', methods=["GET", "POST"])
+def view_timetable():
+    return render_template("view-timetable.html")
+
+@app.route('/student-add', methods=["GET", "POST"])
+def student_add():
+    return render_template("student-add.html")
+
+@app.route('/student-view', methods=["GET", "POST"])
+def student_view():
+    return render_template("student-view.html")
+
+@app.route('/student-delete', methods=["GET", "POST"])
+def student_delete():
+    return render_template("student-delete.html")
+
+@app.route('/view-marks', methods=["GET", "POST"])
+def view_marks():
+    return render_template("view-marks.html")
+
+@app.route('/get-books', methods=["GET", "POST"])
+def get_books():
+    return render_template("get-books.html")
+
+@app.route('/view-books', methods=["GET", "POST"])
+def view_books():
+    return render_template("view-books.html")
+
+@app.route('/return-books', methods=["GET", "POST"])
+def return_books():
+    return render_template("return-books.html")
+
+@app.route('/info-manual', methods=["GET", "POST"])
+def info_manual():
+    return render_template("info-manual.html")
+
+
+
+
 
 if __name__ == '__main__':
     app.secret_key="kulksidtestkey"
