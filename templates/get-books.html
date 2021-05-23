@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Get Books</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../static/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/images/LOGO1.png">
     <link href="../static/vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="../static/vendor/chartist/css/chartist.min.css">
     <link href="../static/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
@@ -194,19 +194,19 @@
                                         <div class="form-group row">
                                             <label class="col-sm-3 col-form-label">Roll No</label>
                                             <div class="col-sm-9">
-                                                <input type="string" class="form-control" placeholder="BECOC321" id="rollno">
+                                                <input type="string" class="form-control"  id="rollno" required>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-sm-3 col-form-label">BookID</label>
                                             <div class="col-sm-9">
-                                                <input type="string" class="form-control" placeholder="B####" id="bookId">
+                                                <input type="string" class="form-control"  id="bookId">
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-sm-3 col-form-label">Book Name</label>
                                             <div class="col-sm-9">
-                                                <input type="string" class="form-control" placeholder="Let us C" id="bookName">
+                                                <input type="string" class="form-control"  id="bookName">
                                             </div>
                                         </div>
                                         <fieldset class="form-group">
@@ -311,11 +311,11 @@
 <!-- Issue: The alert does not work if and only if the fields are left BLANK. Works normally if fields are filled -->
     <script>
         $("#submit").click(function() {
-            var stuname = $("#stuName").val();
+            var stuname = $("#rollno").val();
             var bookid = $("#bookId").val();
             var bookname = $("#bookName").val();
             
-            if(stuname === undefined || bookid === undefined || bookname === undefined) {
+            if(stuname == "" || bookid == "" || bookname == "") {
                 swal({
                     title: "Oops!",
                     text: "Please fill all the fields!",
@@ -326,7 +326,6 @@
                 Swal.fire({
                     title: "Yaay!",
                     text: "Book issued to "+stuname+"!",
-                    footer: '<p>Want to return some books? click <b><a href=return-books.html> Here!</a></b></p>',
                     icon: "success",
                     button: "Okay",
                 });
