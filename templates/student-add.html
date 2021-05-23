@@ -108,8 +108,8 @@
 							<span class="nav-text" data-toggle="tooltip" data-placement="right" title="View/Update Attendance records">Attendance</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="./mark-attendance.html">Mark</a></li>
-                            <li><a href="./view-attendance.html">View</a></li>
+                            <li><a href="{{ url_for('mark_attendance')}}">Mark</a></li>
+                            <li><a href="{{ url_for('view_attendance')}}">View</a></li>
                         </ul>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -117,7 +117,7 @@
 							<span class="nav-text" data-toggle="tooltip" data-placement="right" title="This weeks Time Table">TimeTable</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="./view-timetable.html">View</a></li>
+                            <li><a href="{{ url_for('view_timetable')}}">View</a></li>
                             
                         </ul>
                     </li>
@@ -126,9 +126,9 @@
 							<span class="nav-text" data-toggle="tooltip" data-placement="right" title="Add/Remove student from your class">Student</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="./student-add.html">Add</a></li>
-                            <li><a href="./student-view.html">View</a></li>
-                            <li><a href="./student-delete.html">Delete</a></li>
+                            <li><a href="{{ url_for('student_add')}}">Add</a></li>
+                            <li><a href="{{ url_for('student_view')}}">View</a></li>
+                            <li><a href="{{ url_for('student_delete')}}">Delete</a></li>
                         </ul>
                     </li>
                     <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -136,7 +136,7 @@
 							<span class="nav-text" data-toggle="tooltip" data-placement="right" title="View Student performance">Marksheet</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="./view-marks.html">View Marksheet</a></li>
+                            <li><a href="{{ url_for('view_marks')}}">View Marksheet</a></li>
                         </ul>
                     </li>
                    
@@ -145,12 +145,12 @@
 							<span class="nav-text" data-toggle="tooltip" data-placement="right" title="Take a look into department library">Library Manager</span>
 						</a>
                         <ul aria-expanded="false">
-                            <li><a href="./get-books.html">Get Books</a></li>
-                            <li><a href="./view-books.html">View Books</a></li>
-                            <li><a href="./return-books.html">Return Books</a></li>
+                            <li><a href="{{ url_for('get_books')}}">Get Books</a></li>
+                            <li><a href="{{ url_for('view_books')}}">View Books</a></li>
+                            <li><a href="{{ url_for('return_books')}}">Return Books</a></li>
                         </ul>
                     </li>
-					<li><a href="info-manual.html" class="ai-icon" aria-expanded="false">
+					<li><a href="{{ url_for('info_manual')}}" class="ai-icon" aria-expanded="false">
 						<i class="flaticon-381-heart"></i>
 						<span class="nav-text" data-toggle="tooltip" data-placement="right" title="Get to know Vortex better">Information</span>
 					</a>
